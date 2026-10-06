@@ -1,0 +1,526 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Inter', sans-serif;
+  color: #172033;
+  background: #f4f7fb;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+/* =========================
+   LOGIN
+========================= */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at top left, #dbeafe 0, transparent 35%),
+    radial-gradient(circle at bottom right, #e0e7ff 0, transparent 35%),
+    #f4f7fb;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 410px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid #e5eaf1;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(30, 41, 59, 0.10);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  color: white;
+  font-size: 17px;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+.login-header h1 {
+  margin: 0 0 7px;
+  font-size: 25px;
+  letter-spacing: -0.5px;
+}
+
+.login-header p {
+  margin: 0;
+  color: #718096;
+  font-size: 13px;
+}
+
+/* =========================
+   MAIN APP
+========================= */
+
+.app {
+  min-height: 100vh;
+  background: #f4f7fb;
+}
+
+/* Top navigation */
+
+.navbar {
+  height: 74px;
+  padding: 0 42px;
+  background: #ffffff;
+  border-bottom: 1px solid #e6eaf0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.025);
+}
+
+.navbar h1 {
+  margin: 0 0 3px;
+  color: #172033;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.navbar span {
+  color: #8a94a6;
+  font-size: 11px;
+}
+
+/* Main container */
+
+.container {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 38px 0 50px;
+}
+
+/* =========================
+   HEADER AREA
+========================= */
+
+.container::before {
+  content: "Manage your products";
+  display: block;
+  margin-bottom: 5px;
+  color: #172033;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+}
+
+.container::after {
+  content: "Add, update, and organize your product records.";
+  display: block;
+  margin-bottom: 28px;
+  color: #7a8495;
+  font-size: 13px;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.form-card,
+.table-card {
+  background: #ffffff;
+  border: 1px solid #e5eaf1;
+  border-radius: 13px;
+  box-shadow: 0 5px 18px rgba(15, 23, 42, 0.045);
+}
+
+.form-card {
+  padding: 26px;
+  margin-bottom: 22px;
+  position: relative;
+  overflow: hidden;
+}
+
+.form-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #2563eb, #6366f1);
+}
+
+.section-header {
+  margin-bottom: 22px;
+}
+
+.section-header h2,
+.table-header h2 {
+  margin: 0 0 5px;
+  color: #202938;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.section-header p {
+  margin: 0;
+  color: #8993a3;
+  font-size: 12px;
+}
+
+/* =========================
+   FORMS
+========================= */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 17px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 7px;
+  color: #455166;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 11px 13px;
+  border: 1px solid #d8dee8;
+  border-radius: 7px;
+  background: #fbfcfe;
+  color: #172033;
+  font-size: 13px;
+  outline: none;
+  transition: 0.15s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #a9b1be;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  background: #ffffff;
+  border-color: #4f7df3;
+  box-shadow: 0 0 0 3px rgba(79, 125, 243, 0.10);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.primary-button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 7px;
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.18);
+  transition: 0.15s ease;
+}
+
+.primary-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.23);
+}
+
+.secondary-button {
+  padding: 10px 17px;
+  border: 1px solid #d5dbe5;
+  border-radius: 7px;
+  background: white;
+  color: #596579;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.secondary-button:hover {
+  background: #f7f8fa;
+}
+
+.login-button {
+  width: 100%;
+  margin-top: 5px;
+  padding: 12px;
+}
+
+/* Logout */
+
+.logout-button {
+  padding: 8px 14px;
+  border: 1px solid #e4e7ed;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #596579;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  color: #dc2626;
+  border-color: #fecaca;
+  background: #fff8f8;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.table-card {
+  overflow: hidden;
+}
+
+.table-header {
+  padding: 22px 25px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.table-header h2 {
+  margin-bottom: 4px;
+}
+
+.table-header span {
+  color: #929baa;
+  font-size: 11px;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+thead {
+  background: #f8f9fc;
+}
+
+th {
+  padding: 12px 20px;
+  text-align: left;
+  color: #788397;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-top: 1px solid #edf0f4;
+  border-bottom: 1px solid #e7ebf0;
+}
+
+td {
+  padding: 15px 20px;
+  color: #4b5668;
+  border-bottom: 1px solid #edf0f4;
+  vertical-align: middle;
+}
+
+tbody tr {
+  transition: background 0.12s ease;
+}
+
+tbody tr:hover {
+  background: #fafbfe;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+td strong {
+  color: #263246;
+  font-weight: 600;
+}
+
+.description {
+  max-width: 320px;
+  color: #8791a1;
+}
+
+.actions {
+  display: flex;
+  gap: 6px;
+}
+
+.edit-button,
+.delete-button {
+  padding: 6px 11px;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.12s ease;
+}
+
+.edit-button {
+  border: 1px solid #d8dfeb;
+  background: #ffffff;
+  color: #4b5b73;
+}
+
+.edit-button:hover {
+  background: #f1f5ff;
+  border-color: #b9c9ed;
+  color: #2563eb;
+}
+
+.delete-button {
+  border: 1px solid #f1d1d1;
+  background: #fffafa;
+  color: #dc5252;
+}
+
+.delete-button:hover {
+  background: #fff0f0;
+  border-color: #efb6b6;
+}
+
+.empty-state {
+  padding: 45px 20px;
+  text-align: center;
+  color: #a0a9b7;
+}
+
+/* =========================
+   ALERTS
+========================= */
+
+.alert {
+  padding: 11px 14px;
+  margin-bottom: 18px;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.alert.success {
+  background: #f1fbf5;
+  border: 1px solid #c8ead4;
+  color: #257344;
+}
+
+.alert.error {
+  background: #fff5f5;
+  border: 1px solid #f2cccc;
+  color: #c53f3f;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .container {
+    width: calc(100% - 28px);
+    padding-top: 28px;
+  }
+
+  .container::before {
+    font-size: 22px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .full-width {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    height: 68px;
+  }
+
+  .navbar h1 {
+    font-size: 16px;
+  }
+
+  .navbar span {
+    display: none;
+  }
+
+  .container {
+    width: calc(100% - 20px);
+    padding-top: 24px;
+  }
+
+  .form-card {
+    padding: 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .full-width {
+    grid-column: 1;
+  }
+
+  .login-card {
+    padding: 28px 23px;
+  }
+}
